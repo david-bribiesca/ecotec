@@ -1,19 +1,15 @@
 import "./globals.css"
-import Navbar from "@/components/navbar"
-import Footer from "@/components/footer"
 
 export const metadata = {
-  title: "MyApp | Modern Dashboard",
-  description: "A modern app powered by Next.js, Supabase, and Tailwind CSS.",
+  title: "Mi App",
+  description: "Aplicación con Supabase y Next.js"
 }
 
-export default function home({ children }: { children: React.ReactNode }) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
-      <body className="bg-white text-gray-900 flex flex-col min-h-screen">
-        <Navbar />
-        <main className="flex-1">{children}</main>
-        <Footer />
+    <html lang="es">
+      <body className="min-h-screen bg-gray-50 text-gray-900">
+        {children}
       </body>
     </html>
   )
